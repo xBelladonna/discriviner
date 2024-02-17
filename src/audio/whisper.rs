@@ -125,6 +125,13 @@ impl Whisper {
     fn make_params(previous_tokens: &Vec<WhisperToken>) -> FullParams<'_, '_> {
         let mut params = FullParams::new(SamplingStrategy::Greedy { best_of: 1 });
 
+        // TODO: make configurable
+        // params.set_n_threads(32);
+        // enable translation
+        // params.set_translate(true);
+        // and set the language to translate to
+        // params.set_language(Some("en"));
+        // also explicitly disable anything that prints to stdout
         params.set_print_special(false);
         params.set_print_progress(false);
         params.set_print_realtime(false);
