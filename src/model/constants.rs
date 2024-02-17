@@ -10,7 +10,7 @@ pub(crate) const AUDIO_TO_RECORD: Duration = Duration::from_secs(AUDIO_TO_RECORD
 /// use them to seed the next transcription.  This is per-user.
 pub(crate) const TOKENS_TO_KEEP: usize = 1024;
 
-pub(crate) const USER_SILENCE_TIMEOUT_MS: usize = 250;
+pub(crate) const USER_SILENCE_TIMEOUT_MS: usize = 1000;
 pub(crate) const USER_SILENCE_TIMEOUT: Duration =
     Duration::from_millis(USER_SILENCE_TIMEOUT_MS as u64);
 
